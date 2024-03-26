@@ -3,7 +3,49 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="styles/style.css" />
+    <title>Increase the birthrate</title>
   </head>
-  <body></body>
+  <body>
+    <main>
+      <div id="game-intro">
+        <img src="./images/logo.png" alt="" class="logo-img" />
+        <br />
+        <p>
+          Welcome, Stork! Let's boost that birthrate and secure your retirement!
+        </p>
+        <button id="start-btn">Start Game</button>
+        <button id="instructions">Instructions</button>
+      </div>
+
+      <div id="game-container">
+        <div>
+          <h2>Stats</h2>
+          <p>Score: <span id="score">0</span></p>
+          <p>Lives: <span id="lives">3</span></p>
+        </div>
+        <!-- #game-screen is initially hidden using CSS style display: none -->
+        <div id="game-screen"></div>
+      </div>
+
+      <!-- #game-end is initially hidden using CSS style display: none -->
+      <div id="game-outro">
+        <img src="./images/logo.png" alt="" class="logo-img" />
+        <h1>Game Over</h1>
+        <p>
+          Oops! Looks like you dropped the ball... or rather, the baby. You
+          failed our economy but you can...
+        </p>
+        <br />
+        <button id="restart-btn">Try again</button>
+        <button id="startscreen-btn">Back to Start</button>
+      </div>
+    </main>
+
+    <script type="text/javascript" src="js/game.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/baby.js"></script>
+    <script type="text/javascript" src="js/house.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
 </html>
