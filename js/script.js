@@ -1,5 +1,8 @@
 const startButton = document.getElementById("start-btn");
-const restartButton = document.getElementById("restart-btn");
+const tryAgainButton = document.getElementById("try-again-btn");
+const instructionsButton = document.getElementById("instructions-btn");
+const backInstructionsButton = document.getElementById("back-btn");
+let game;
 
 function startGame() {
   console.log("start game");
@@ -7,8 +10,30 @@ function startGame() {
   game.start();
 }
 
+function tryAgain() {
+  location.reload();
+}
+
 startButton.addEventListener("click", function () {
   startGame();
+});
+
+tryAgainButton.addEventListener("click", function () {
+  tryAgain();
+});
+
+instructionsButton.addEventListener("click", function () {
+  document.getElementById("game-intro").style.display = "none";
+  document.getElementById("game-outro").style.display = "none";
+  document.getElementById("game-container").style.display = "none";
+  document.getElementById("instructions").style.display = "block";
+});
+
+backInstructionsButton.addEventListener("click", function () {
+  document.getElementById("game-intro").style.display = "block";
+  document.getElementById("game-outro").style.display = "none";
+  document.getElementById("game-container").style.display = "none";
+  document.getElementById("instructions").style.display = "none";
 });
 
 document.addEventListener("keydown", (event) => {

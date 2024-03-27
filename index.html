@@ -15,14 +15,21 @@
           Welcome, Stork! Let's boost that birthrate and secure your retirement!
         </p>
         <button id="start-btn">Start Game</button>
-        <button id="instructions">Instructions</button>
+        <button id="instructions-btn">Instructions</button>
+      </div>
+
+      <div id="instructions">
+        <p>Deliver the babys to their parents by dropping them on the houses</p>
+        <p>Use wasd to move</p>
+        <p>Use spacebar to drop babies</p>
+        <button id="back-btn">Back</button>
       </div>
 
       <div id="game-container">
         <div>
           <h2>Stats</h2>
           <p>Score: <span id="score">0</span></p>
-          <p>Lives: <span id="lives">3</span></p>
+          <p id="lives-display">Lives: <span id="lives">3</span></p>
         </div>
         <!-- #game-screen is initially hidden using CSS style display: none -->
         <div id="game-screen"></div>
@@ -34,11 +41,14 @@
         <h1>Game Over</h1>
         <p>
           Oops! Looks like you dropped the ball... or rather, the baby. You
-          failed our economy but you can...
+          failed our economy!
         </p>
         <br />
-        <button id="restart-btn">Try again</button>
-        <button id="startscreen-btn">Back to Start</button>
+        <button id="try-again-btn">Back to Start</button>
+      </div>
+
+      <div id="game-won">
+        <h1>You did it!</h1>
       </div>
     </main>
 

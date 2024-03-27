@@ -2,6 +2,7 @@ class House {
   constructor(gameScreen) {
     this.width = 100;
     this.height = 150;
+    this.speed = 2;
     this.gameScreen = gameScreen;
     this.left = gameScreen.clientWidth;
     this.top = gameScreen.clientHeight - this.height - 40;
@@ -24,7 +25,7 @@ class House {
   }
 
   move() {
-    this.left += -3;
+    this.left += -this.speed;
     this.updatePosition();
   }
 }

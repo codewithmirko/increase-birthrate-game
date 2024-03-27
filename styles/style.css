@@ -8,7 +8,7 @@ body {
 }
 
 #game-container {
-  display: flex;
+  display: none;
   width: 100vw;
   padding: 20px 0px;
   justify-content: center;
@@ -23,28 +23,29 @@ body {
   position: relative;
   background-image: url(../images/road.png);
   background-size: cover;
-  animation: slide 5s linear infinite;
+  animation: airslide 5s linear infinite;
 }
 
-@keyframes slide {
-  0% {
-    background-position: 0 -1000px;
-  }
-  95% {
-    background-position: 0 0;
-  }
-  100% {
-    background-position: 0 50px;
-  }
+#instructions {
+  display: none;
 }
 
 #game-outro {
   display: none;
 }
 
-.game-intro p {
+#game-intro p {
   font-size: 18px;
   font-family: "Verdana";
+}
+
+#lives-display {
+  display: inline;
+}
+
+#game-won {
+  color: orange;
+  display: none;
 }
 
 .logo-img {
@@ -64,4 +65,49 @@ body button {
   box-shadow: 0;
   border-radius: 5px;
   margin-bottom: 20px;
+}
+
+@keyframes airslide {
+  0% {
+    background-position: 0 -1000px;
+  }
+  95% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 0 50px;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  10%,
+  30%,
+  50%,
+  70%,
+  90% {
+    transform: translateX(-10px);
+  }
+  20%,
+  40%,
+  60%,
+  80% {
+    transform: translateX(10px);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.house-animation {
+  animation: shake 1s ease forwards, fadeOut 1s ease 1s forwards;
 }
