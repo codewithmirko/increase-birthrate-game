@@ -1,15 +1,15 @@
 class Baby {
   constructor(gameScreen, playerLeft, playerTop) {
-    this.width = 50;
-    this.height = 50;
+    this.width = 80;
+    this.height = 80;
     this.gameScreen = gameScreen;
     this.left = playerLeft;
     this.top = playerTop;
     this.speed = 4;
-    this.babyElement = document.createElement("img");
-    this.babyElement.src = "img/test-baby.png";
-    this.babyElement.style.position = "absolute";
 
+    this.babyElement = document.createElement("img");
+    this.babyElement.src = "img/baby.gif";
+    this.babyElement.style.position = "absolute";
     this.babyElement.style.width = `${this.width}px`;
     this.babyElement.style.height = `${this.height}px`;
 
@@ -46,11 +46,5 @@ class Baby {
       game.removeBaby(this);
       return;
     }
-
-    game.houses.forEach((house) => {
-      if (this.checkCollisionWithHouse(house)) {
-        console.log("Hit!");
-      }
-    });
   }
 }

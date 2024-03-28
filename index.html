@@ -4,47 +4,44 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles/style.css" />
-    <title>Increase the birthrate</title>
+    <title>Stork Simulator</title>
   </head>
   <body>
     <main>
       <div id="game-intro">
-        <img src="./images/logo.png" alt="" class="logo-img" />
-        <br />
-        <p>
-          Welcome, Stork! Let's boost that birthrate and secure your retirement!
-        </p>
+        <img src="./img/logo.png" alt="" class="logo-img" />
+        <h2>Let's boost that birthrate and secure your retirement!</h2>
         <button id="start-btn">Start Game</button>
         <button id="instructions-btn">Instructions</button>
       </div>
 
       <div id="instructions">
-        <p>Deliver the babys to their parents by dropping them on the houses</p>
-        <p>Use wasd to move</p>
-        <p>Use spacebar to drop babies</p>
+        <h2>
+          Welcome Stork! Your objective: Deliver 50 babys by dropping them off
+          at their homes. If you miss a house or a baby hits the ground, you
+          lose one life.
+        </h2>
+        <p>Use W A S D to move</p>
+        <p>Use B to drop babies</p>
         <button id="back-btn">Back</button>
       </div>
 
       <div id="game-container">
         <div>
-          <h2>Stats</h2>
           <p>Score: <span id="score">0</span></p>
           <p id="lives-display">Lives: <span id="lives">3</span></p>
         </div>
-        <!-- #game-screen is initially hidden using CSS style display: none -->
         <div id="game-screen"></div>
       </div>
 
-      <!-- #game-end is initially hidden using CSS style display: none -->
       <div id="game-outro">
-        <img src="./images/logo.png" alt="" class="logo-img" />
-        <h1>Game Over</h1>
-        <p>
+        <img src="./img/gameoverlogo.png" alt="" class="logo-img" />
+        <h2>
           Oops! Looks like you dropped the ball... or rather, the baby. You
           failed our economy!
-        </p>
+        </h2>
         <br />
-        <button id="try-again-btn">Back to Start</button>
+        <button id="try-again-btn">Try again</button>
       </div>
 
       <div id="game-won">

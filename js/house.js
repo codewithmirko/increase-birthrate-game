@@ -1,14 +1,13 @@
 class House {
   constructor(gameScreen) {
-    this.width = 100;
-    this.height = 150;
+    this.width = 90;
+    this.height = 115;
     this.speed = 2;
     this.gameScreen = gameScreen;
     this.left = gameScreen.clientWidth;
     this.top = gameScreen.clientHeight - this.height - 40;
 
     this.houseElement = document.createElement("img");
-
     this.houseElement.src = "img/test-house.png";
     this.houseElement.style.position = "absolute";
     this.houseElement.style.width = `${this.width}px`;

@@ -1,8 +1,12 @@
+// Get all the button IDs
+
 const startButton = document.getElementById("start-btn");
 const tryAgainButton = document.getElementById("try-again-btn");
 const instructionsButton = document.getElementById("instructions-btn");
 const backInstructionsButton = document.getElementById("back-btn");
 let game;
+
+// Start and restart functions
 
 function startGame() {
   console.log("start game");
@@ -11,8 +15,11 @@ function startGame() {
 }
 
 function tryAgain() {
-  location.reload();
+  game.restart();
+  this.startGame();
 }
+
+// Handle all keyboard Inputs
 
 startButton.addEventListener("click", function () {
   startGame();
@@ -30,14 +37,14 @@ instructionsButton.addEventListener("click", function () {
 });
 
 backInstructionsButton.addEventListener("click", function () {
-  document.getElementById("game-intro").style.display = "block";
+  document.getElementById("game-intro").style.display = "flex";
   document.getElementById("game-outro").style.display = "none";
   document.getElementById("game-container").style.display = "none";
   document.getElementById("instructions").style.display = "none";
 });
 
 document.addEventListener("keydown", (event) => {
-  if (event.code === "Space") {
+  if (event.code === "KeyB") {
     game.spawnBaby();
   }
 });
