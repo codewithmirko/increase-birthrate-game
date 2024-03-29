@@ -87,6 +87,7 @@ class Game {
         this.houses.splice(this.houses.indexOf(house), 1);
         this.lives--;
         document.getElementById("lives").innerText = this.lives;
+        audioLostPoint.play();
         this.canTrigger = false;
         setTimeout(() => {
           this.canTrigger = true;
@@ -104,6 +105,7 @@ class Game {
       if (baby.top > this.height && this.canTrigger) {
         this.lives--;
         document.getElementById("lives").innerText = this.lives;
+        audioBabySad.play();
         this.canTrigger = false;
         setTimeout(() => {
           this.canTrigger = true;
@@ -120,6 +122,7 @@ class Game {
           house.houseElement.classList.add("house-animation");
           this.score += 1;
           document.getElementById("score").innerText = this.score;
+          audioBabyHappy.play();
 
           this.canTrigger = false;
           setTimeout(() => {
@@ -137,6 +140,9 @@ class Game {
       this.instructionsScreen.style.display = "none";
       this.endScreen.style.display = "block";
       this.livesDisplay.style.display = "none";
+      audioGameMusic.pause();
+      audioGameMusic.currentTime = 0;
+      audioGameOver.play();
     }
 
     if (this.score > 50) {
