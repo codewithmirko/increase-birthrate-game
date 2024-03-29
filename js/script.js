@@ -6,6 +6,24 @@ const instructionsButton = document.getElementById("instructions-btn");
 const backInstructionsButton = document.getElementById("back-btn");
 let game;
 
+// Get all the audio IDs
+const audioClick = document.getElementById("button-click-audio");
+audioClick.volume = 0.4;
+const audioFire = document.getElementById("fire-audio");
+audioFire.volume = 0.4;
+// const audioBabySad = document.getElementById("baby-sad-audio");
+// audioBabySad.volume = 0.4;
+// const audioBabyHappy = document.getElementById("baby-happy-audio");
+// audioBabyHappy.volume = 0.4;
+// const audioButtonHover = document.getElementById("button-hover-audio");
+// audioButtonHover.volume = 0.4;
+// const audioLostPoint = document.getElementById("lost-point-audio");
+// audioLostPoint.volume = 0.4;
+// const audioGameMusic = document.getElementById("game-music-audio");
+// audioGameMusic.volume = 0.4;
+// const audioGameOver = document.getElementById("game-over-music-audio");
+// audioGameOver.volume = 0.4;
+
 // Start and restart functions
 
 function startGame() {
@@ -23,6 +41,7 @@ function tryAgain() {
 
 startButton.addEventListener("click", function () {
   startGame();
+  audioClick.play();
 });
 
 tryAgainButton.addEventListener("click", function () {
@@ -46,6 +65,7 @@ backInstructionsButton.addEventListener("click", function () {
 document.addEventListener("keydown", (event) => {
   if (event.code === "KeyB") {
     game.spawnBaby();
+    audioFire.play();
   }
 });
 

@@ -21,9 +21,11 @@ h2 {
 }
 
 p {
-  font-size: 2rem;
+  font-size: 2.5rem;
   color: black;
   font-weight: bold;
+  margin-right: 20px;
+  text-shadow: 1px 1px white;
 }
 
 span {
@@ -99,6 +101,11 @@ button {
   background-position: center;
   padding: 40px 70px;
   margin: 1rem 0;
+}
+
+button:hover {
+  color: white;
+  text-shadow: 4px 4px black;
 }
 
 @keyframes bgSlide {
